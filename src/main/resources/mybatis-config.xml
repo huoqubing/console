@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<!-- changes from the defaults -->
+		<setting name="cacheEnabled" value="true" />
+		<setting name="lazyLoadingEnabled" value="false" />
+		<setting name="defaultStatementTimeout" value="25000" />
+	</settings>
+
+	<typeAliases>
+		<typeAlias alias="user" type="com.sql.project.console.entity.User" />
+		<typeAlias alias="menu" type="com.sql.project.console.entity.Menu" />
+		<typeAlias alias="userRole" type="com.sql.project.console.entity.UserRole" />
+		<typeAlias alias="role" type="com.sql.project.console.entity.Role" />
+		<typeAlias alias="privilege" type="com.sql.project.console.entity.Privilege" />
+		<typeAlias alias="rolePrivilege" type="com.sql.project.console.entity.RolePrivilege" />
+		<typeAlias alias="mobileUser" type="com.sql.project.console.dto.MobileUser" />
+		<typeAlias alias="smsRecord" type="com.sql.project.console.dto.SMSRecord" />
+		<typeAlias alias="pushRecord" type="com.sql.project.console.dto.PushRecord" />
+		<typeAlias alias="pushTag" type="com.sql.project.console.dto.PushTag" />
+	</typeAliases>
+
+	<mappers>
+		<mapper resource="mapper/UserMapper.xml" />
+		<mapper resource="mapper/MenuMapper.xml" />
+		<mapper resource="mapper/RoleMapper.xml" />
+		<mapper resource="mapper/PrivilegeMapper.xml" />
+		<mapper resource="mapper/MobileUserMapper.xml" />
+		<mapper resource="mapper/SMSRecordMapper.xml" />
+		<mapper resource="mapper/PushRecordMapper.xml" />
+		<mapper resource="mapper/PushTagMapper.xml" />
+	</mappers>
+</configuration>
