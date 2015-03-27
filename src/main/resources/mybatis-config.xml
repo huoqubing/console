@@ -22,6 +22,7 @@
 		<typeAlias alias="smsRecord" type="com.sql.project.console.dto.SMSRecord" />
 		<typeAlias alias="pushRecord" type="com.sql.project.console.dto.PushRecord" />
 		<typeAlias alias="pushTag" type="com.sql.project.console.dto.PushTag" />
+		<typeAlias alias="appVersion" type="com.sql.project.console.entity.AppVersion" />
 	</typeAliases>
 
 	<mappers>
@@ -33,5 +34,6 @@
 		<mapper resource="mapper/SMSRecordMapper.xml" />
 		<mapper resource="mapper/PushRecordMapper.xml" />
 		<mapper resource="mapper/PushTagMapper.xml" />
+		<mapper resource="mapper/AppVersionMapper.xml" />
 	</mappers>
 </configuration>
