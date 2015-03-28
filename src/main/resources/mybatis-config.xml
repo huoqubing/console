@@ -18,7 +18,6 @@
 		<typeAlias alias="role" type="com.sql.project.console.entity.Role" />
 		<typeAlias alias="privilege" type="com.sql.project.console.entity.Privilege" />
 		<typeAlias alias="rolePrivilege" type="com.sql.project.console.entity.RolePrivilege" />
-		<typeAlias alias="mobileUser" type="com.sql.project.console.dto.MobileUser" />
 		<typeAlias alias="smsRecord" type="com.sql.project.console.dto.SMSRecord" />
 		<typeAlias alias="pushRecord" type="com.sql.project.console.dto.PushRecord" />
 		<typeAlias alias="pushTag" type="com.sql.project.console.dto.PushTag" />
@@ -30,7 +29,6 @@
 		<mapper resource="mapper/MenuMapper.xml" />
 		<mapper resource="mapper/RoleMapper.xml" />
 		<mapper resource="mapper/PrivilegeMapper.xml" />
-		<mapper resource="mapper/MobileUserMapper.xml" />
 		<mapper resource="mapper/SMSRecordMapper.xml" />
 		<mapper resource="mapper/PushRecordMapper.xml" />
 		<mapper resource="mapper/PushTagMapper.xml" />
