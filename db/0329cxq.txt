@@ -1,0 +1,16 @@
+INSERT INTO `menu` VALUES (71, '用户好友', '/friend/list', 7, 'p_user_friend', 1, '2014-1-1 00:00:00', '2015-3-29 16:49:40', 1);
+
+
+
+
+INSERT INTO `privilege` (`id`, `privilegeId`, `privilegeName`, `createtime`, `updatetime`, `version`) VALUES (70, 'p_user_friend', '用户好友', '2014-1-1 00:00:00', '2015-3-29 20:28:48', 1);
+INSERT INTO `privilege` (`id`, `privilegeId`, `privilegeName`, `createtime`, `updatetime`, `version`) VALUES (71, 'p_friend_add', '增加用户好友', '2014-1-1 00:00:00', '2015-3-29 21:10:00', 1);
+INSERT INTO `privilege` (`id`, `privilegeId`, `privilegeName`, `createtime`, `updatetime`, `version`) VALUES (72, 'p_friend_edit', '编辑用户好友', '2014-1-1 00:00:00', '2015-3-29 21:10:02', 1);
+INSERT INTO `privilege` (`id`, `privilegeId`, `privilegeName`, `createtime`, `updatetime`, `version`) VALUES (73, 'p_friend_del', '删除用户好友', '2014-1-1 00:00:00', '2015-3-29 21:10:05', 1);
+
+
+
+INSERT INTO `role_privilege` (`roleId`, `privilegeId`) VALUES (12, 70);
+INSERT INTO `role_privilege` (`roleId`, `privilegeId`) VALUES (12, 71);
+INSERT INTO `role_privilege` (`roleId`, `privilegeId`) VALUES (12, 72);
+INSERT INTO `role_privilege` (`roleId`, `privilegeId`) VALUES (12, 73);
