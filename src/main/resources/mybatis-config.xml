@@ -22,6 +22,7 @@
 		<typeAlias alias="pushRecord" type="com.sql.project.console.dto.PushRecord" />
 		<typeAlias alias="pushTag" type="com.sql.project.console.dto.PushTag" />
 		<typeAlias alias="appVersion" type="com.sql.project.console.entity.AppVersion" />
+		<typeAlias alias="friend" type="com.sql.project.console.entity.Friend" />
 	</typeAliases>
 
 	<mappers>
@@ -33,5 +34,6 @@
 		<mapper resource="mapper/PushRecordMapper.xml" />
 		<mapper resource="mapper/PushTagMapper.xml" />
 		<mapper resource="mapper/AppVersionMapper.xml" />
+		<mapper resource="mapper/FriendMapper.xml" />
 	</mappers>
 </configuration>
