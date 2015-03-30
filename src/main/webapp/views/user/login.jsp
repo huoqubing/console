@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>印象苏州</title>
+<title>兼职派</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="description" content="">
@@ -61,7 +61,7 @@ body {
 	<div class="container">
 		<%@ include file="../common/message.jsp"%>
 		<form:form class="form-signin" action="login" method="post" modelAttribute="loginBean" id="login_form">
-			<h2 class="form-signin-heading">印象苏州</h2>
+			<h2 class="form-signin-heading">兼职派</h2>
 			<form:input type="text" class="input-block-level" id="loginName" path="loginName"
 				placeholder="用户名"/> 
 			<form:input type="password" class="input-block-level"
