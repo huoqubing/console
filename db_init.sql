@@ -33,9 +33,10 @@ CREATE TABLE `activity` (
   `location` varchar(128) NOT NULL DEFAULT '' COMMENT '地址',
   `longitude` double DEFAULT NULL COMMENT '经度',
   `latitude` double DEFAULT NULL COMMENT '纬度',
-  `datetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '开始时间',
+  `beginTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '开始时间',
   `detail` varchar(1024) DEFAULT NULL COMMENT '详情',
   `type` char(1) DEFAULT NULL COMMENT '类型',
+  `endTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '截止时间',
   `createtime` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='活动';
@@ -136,6 +137,7 @@ DROP TABLE IF EXISTS `article`;
 CREATE TABLE `article` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `studentid` int(11) NOT NULL COMMENT '发表者id',
+  `title` varchar(128) DEFAULT '' COMMENT '故事标题',
   `content` varchar(1024) DEFAULT '' COMMENT '故事内容',
   `createtime` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -422,6 +424,8 @@ CREATE TABLE `part_time_job` (
   `isauction` char(1) DEFAULT 'N' COMMENT '是否竞价',
   `referprice` double DEFAULT NULL COMMENT '参考价格',
   `tag` varchar(64) DEFAULT NULL COMMENT 'tag',
+  `begintime` timestamp NULL DEFAULT NULL COMMENT '开始日期',
+  `endtime` timestamp NULL DEFAULT NULL COMMENT '截止日期',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -4179,7 +4183,9 @@ CREATE TABLE `score_info` (
   `type` varchar(8) DEFAULT NULL COMMENT '获取积分方式',
   `before` double DEFAULT NULL COMMENT '原积分',
   `after` double DEFAULT NULL COMMENT '现积分',
-  `count` double DEFAULT NULL COMMENT '增量',
+  `addCount` double DEFAULT NULL COMMENT '增量',
+  `detail` varchar(1024) DEFAULT NULL COMMIT '详情',
+  `fromId` int(11) NOT NULL COMMENT '评论者id',
   `createtime` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='积分记录';
