@@ -34,7 +34,7 @@
 				and phone like concat('%',#{phone},'%')
 			</if>
 		</where>
-		order by createtime desc;
+		order by createTime desc;
 	</select>
 	<select id="getCount" parameterType="smsRecord" resultType="long" useCache="false">
 		select count(*) from sms_record 
